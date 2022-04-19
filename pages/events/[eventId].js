@@ -13,7 +13,7 @@ function EventDetailPage() {
   const event = getEventById(eventId);
 
   if (!event) {
-    return <p>No event found</p>;
+    return <p>Sorry, no event found</p>;
   }
 
   return (
@@ -25,8 +25,9 @@ function EventDetailPage() {
         image={event.image}
         imageAlt={event.title}
       />
-      <EventContent />
-      <p>{event.description}</p>
+      <EventContent>
+        <p>{event.description}</p>
+      </EventContent>
     </Fragment>
   );
 }
