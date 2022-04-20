@@ -11,8 +11,7 @@ function FilteredEventsPage() {
   const router = useRouter();
 
   const filterData = router.query.slug;
-
-  console.log(filterData);
+  // console.log(filterData);
 
   if (!filterData) {
     return <p className='center'>Loading...</p>;
@@ -38,7 +37,7 @@ function FilteredEventsPage() {
           <p>Invalid filter. Please adjust your values.</p>
         </ErrorAlert>
         <div className='center'>
-          <Button link='/events/'>Show All Events</Button>
+          <Button link='/events'>Show All Events</Button>
         </div>
       </Fragment>
     );
@@ -49,14 +48,14 @@ function FilteredEventsPage() {
     month: numMonth,
   });
 
-  if (!filteredEvents || !filteredEvents.length === 0) {
+  if (!filteredEvents || filteredEvents.length === 0) {
     return (
       <Fragment>
         <ErrorAlert>
-          <p> No events found for the chosen filter!</p>
+          <p>No events found for the chosen filter!</p>
         </ErrorAlert>
         <div className='center'>
-          <Button link='/events/'>Show All Events</Button>
+          <Button link='/events'>Show All Events</Button>
         </div>
       </Fragment>
     );
