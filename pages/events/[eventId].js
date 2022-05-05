@@ -52,7 +52,7 @@ export async function getStaticPaths() {
   const paths = events.map((event) => ({ params: { eventId: event.id } }));
   return {
     paths: paths,
-    fallback: 'blocking',
+    fallback: 'blocking', //Next JS won't serve anything until we are done generating this page
   };
 }
 
