@@ -61,7 +61,7 @@ function FilteredEventsPage(props) {
 }
 
 export async function getServerSideProps(context) {
-  const params = context;
+  const { params } = context;
 
   const filterData = params.slug;
 
