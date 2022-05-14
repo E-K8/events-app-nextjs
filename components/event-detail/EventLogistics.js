@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import AddressIcon from '../icons/address-icon';
 import DateIcon from '../icons/date-icon';
 import LogisticsItem from './LogisticsItem';
@@ -16,7 +18,8 @@ function EventLogistics(props) {
   return (
     <section className={styles.logistics}>
       <div className={styles.image}>
-        <img src={`/${image}`} alt={imageAlt} />
+        <Image src={`/${image}`} alt={imageAlt} width={400} height={400} />
+        {/* these sizes only determine what will be fetched ^^^, but final styling will still be determined by css file*/}
       </div>
       <ul className={styles.list}>
         <LogisticsItem icon={DateIcon}>
