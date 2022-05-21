@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import { getFeaturedEvents } from '../helpers/api-util';
 import EventList from '../components/events/EventList';
+import NewsletterRegistration from '../components/input/NewsletterRegistration';
 
 function HomePage(props) {
   return (
@@ -10,6 +11,7 @@ function HomePage(props) {
         <title>Next JS events app</title>
         <meta name='description' content='Find a lot of great IT events' />
       </Head>
+      <NewsletterRegistration />
       <EventList items={props.events} />
     </div>
   );
