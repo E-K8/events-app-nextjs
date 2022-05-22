@@ -15,7 +15,7 @@ function NewComment(props) {
     const enteredName = nameInputRef.current.value;
     const enteredComment = commentInputRef.current.value;
 
-    // client-side validation ↓↓↓
+    // client-side validation which we shouldn't trust ↓↓↓
 
     if (
       !enteredEmail ||

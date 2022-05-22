@@ -29,7 +29,7 @@ function handler(req, res) {
 
     if (req.method === 'GET') {
       const dummyList = [
-        { id: 'c1', name: 'Kate', text: 'Commenting for my network' },
+        { id: 'c1', name: 'Stephen', text: 'Commenting for my network' },
         { id: 'c2', name: 'Rufus', text: 'Valid point' },
       ];
 
