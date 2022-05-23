@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import CommentList from './CommentList';
 import NewComment from './NewComment';
